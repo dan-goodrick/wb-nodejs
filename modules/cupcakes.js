@@ -1,4 +1,8 @@
-import { prettyPrintCupcake} from "./cupcake-printer.js";
+import p, {simplePrintCupcake} from "./cupcake-printer.js";
+// common JS importing;  Require can't be used in a browser
+// const { prettyPrintCupcake } = require('./cupcake-printer.js');
+
+
 const cupcakes = [
   {
     flavor: 'vanilla',
@@ -15,5 +19,7 @@ const cupcakes = [
 ];
 
 for (const cupcake of cupcakes) {
-  console.log(prettyPrintCupcake(cupcake));
+  console.log(p(cupcake));
 }
+
+console.log(simplePrintCupcake(cupcakes))
